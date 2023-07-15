@@ -3,7 +3,7 @@ import gradio as gr
 def demo_function(text: str) -> str:
     return text
 
-def clear_function(text: str) -> str:
+def clear_function() -> tuple:
     return '', ''
 
 with gr.Blocks() as demo:
@@ -16,7 +16,7 @@ with gr.Blocks() as demo:
         output_text = gr.components.Textbox(label='Output')
 
     submit.click(demo_function, [input_text], [output_text])
-    clear.click(clear_function, [input_text], [input_text, output_text])
+    clear.click(clear_function, [], [input_text, output_text])
 
 if __name__ == '__main__':
     demo.launch()

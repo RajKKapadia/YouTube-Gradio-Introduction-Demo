@@ -6,9 +6,9 @@ def demo_function(text: str) -> str:
 demo = gr.Interface(
     fn=demo_function,
     inputs=gr.components.Textbox(label='Input'),
-    outputs=gr.components.Textbox(label='Outputs'),
+    outputs=gr.components.Textbox(label='Output'),
     allow_flagging=False
 )
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     demo.launch()
