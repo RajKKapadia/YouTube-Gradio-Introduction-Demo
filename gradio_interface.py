@@ -7,7 +7,7 @@ demo = gr.Interface(
     fn=demo_function,
     inputs=gr.components.Textbox(label='Input'),
     outputs=gr.components.Textbox(label='Output'),
-    allow_flagging=False
+    allow_flagging='never'
 )
 
 if __name__ == '__main__':
